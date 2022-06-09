@@ -5,6 +5,10 @@
   "main": "index.ts",
   "author": "Ebrahim Merchant",
   "license": "MIT",
+  "scripts": {
+    "start": "npx tsc && logMode=2 node dist/index.js",
+    "test": "npx tsc && logMode=2 node dist/test.js"
+  },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
     "@types/node": "^17.0.38",

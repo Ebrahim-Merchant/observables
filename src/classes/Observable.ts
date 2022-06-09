@@ -61,7 +61,9 @@ export class Observable<T, E = any> {
     return this;
   }
 
-  subscribe(callbackfn: (value: T) => void): { unsubscribe: () => void } {
+  subscribe(
+    callbackfn: (value: T) => void,
+  ): { unsubscribe: () => void } {
     if (this.isComplete) {
       return { unsubscribe: () => {} };
     }
