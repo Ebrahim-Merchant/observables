@@ -1,6 +1,8 @@
 // import { Logger } from "./classes/logger";
 // import { Observable } from "./classes/Observable";
 
+import { randomQuestion } from "./random";
+
 // const START = 1000;
 
 // const observer = new Observable<number | undefined>((subscriber) => {
@@ -39,19 +41,21 @@
 //   Logger.info(`subscriberTwo unsubscribed, num of observers: ${(observer as any).observers.length}`);
 // }, START * 9);
 
-import { Observable } from "./classes/Observable";
+// import { Observable } from "./classes/Observable";
 
-const observable = new Observable(subscriber => {
-  console.log('someone subscribed');
-  subscriber.next(1);
-  subscriber.next(2);
-  subscriber.next(3);
-  setTimeout(() => {
-    subscriber.next(4);
-    subscriber.complete();
-  }, 1000);
-});
+// const observable = new Observable(subscriber => {
+//   console.log('someone subscribed');
+//   subscriber.next(1);
+//   subscriber.next(2);
+//   subscriber.next(3);
+//   setTimeout(() => {
+//     subscriber.next(4);
+//     subscriber.complete();
+//   }, 1000);
+// });
 
-console.log('just before subscribe');
-observable.subscribe((x) => { console.log('got value ' + x)});
-console.log('just after subscribe');
+// console.log('just before subscribe');
+// observable.subscribe((x) => { console.log('got value ' + x)});
+// console.log('just after subscribe');
+
+console.log(randomQuestion());
